@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Transient.Models;
+using Transient.ViewModels;
 
 namespace Transient.Controllers
 {
@@ -13,8 +14,20 @@ namespace Transient.Controllers
         public ActionResult Random()
         {
             var vehicle = new Vehicle() { Name = "Phantom" };
+            var customers = new List<Customer>()
+            {
+                new Customer { Name = "Johnny" },
+                new Customer {Name= "Gilroy" }
+            };
 
-            return View(vehicle);
+            var viewModel = new RandomVehicleViewModel()
+            {
+                Vehicle = vehicle,
+                Customers = customers
+
+            };
+
+            return View(viewModel);
         }
     }
 }
