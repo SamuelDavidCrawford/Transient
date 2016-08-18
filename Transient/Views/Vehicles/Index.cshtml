@@ -22,7 +22,7 @@ else
             @foreach (var vehicle in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(vehicle.Name, "Details", "Vehicle", new { id = vehicle.Id }, null)</td>
+                    <td>@Html.ActionLink(vehicle.Name, "Details", "Vehicles", new { id = vehicle.Id }, null)</td>
                 </tr>
             }
         </tbody>

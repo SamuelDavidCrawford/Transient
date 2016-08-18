@@ -39,7 +39,7 @@ namespace Transient.Controllers
 
         public ActionResult Details(int id)
         {
-            var vehicle = GetVehicles();
+            var vehicle = GetVehicles().SingleOrDefault(v => v.Id == id);
 
             if (vehicle == null)
                 return HttpNotFound();
