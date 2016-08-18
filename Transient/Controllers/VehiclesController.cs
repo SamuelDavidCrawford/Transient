@@ -29,5 +29,31 @@ namespace Transient.Controllers
 
             return View(viewModel);
         }
+
+        public ViewResult Index()
+        {
+            var vehicles = GetVehicles();
+
+            return View(vehicles);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var vehicle = GetVehicles();
+
+            if (vehicle == null)
+                return HttpNotFound();
+
+            return View(vehicle);
+        }
+
+        private IEnumerable<Vehicle> GetVehicles()
+        {
+            return new List<Vehicle>
+            {
+                new Vehicle { Name = "Rolls Royce", Id = 1 },
+                new Vehicle {Name = "Range Rover", Id = 2 }
+            };
+        }
     }
 }
