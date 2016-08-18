@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\VehiclesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -206,6 +207,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -280,6 +282,8 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
     <Content Include="Views\Vehicles\Details.cshtml" />
+    <Content Include="Views\Locations\Index.cshtml" />
+    <Content Include="Views\Locations\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
