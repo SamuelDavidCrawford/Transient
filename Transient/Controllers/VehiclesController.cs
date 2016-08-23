@@ -11,24 +11,7 @@ namespace Transient.Controllers
     public class VehiclesController : Controller
     {
         // GET: Vehicles
-        public ActionResult Random()
-        {
-            var vehicle = new Vehicle() { Name = "Phantom" };
-            var customers = new List<Customer>()
-            {
-                new Customer { Name = "Johnny" },
-                new Customer {Name= "Gilroy" }
-            };
 
-            var viewModel = new RandomVehicleViewModel()
-            {
-                Vehicle = vehicle,
-                Customers = customers
-
-            };
-
-            return View(viewModel);
-        }
 
         public ViewResult Index()
         {
@@ -54,6 +37,26 @@ namespace Transient.Controllers
                 new Vehicle { Name = "Rolls Royce", Id = 1 },
                 new Vehicle {Name = "Range Rover", Id = 2 }
             };
+        }
+
+        //not being used
+        public ActionResult Random()
+        {
+            var vehicle = new Vehicle() { Name = "Phantom" };
+            var customers = new List<Customer>()
+            {
+                new Customer { Name = "Johnny" },
+                new Customer {Name= "Gilroy" }
+            };
+
+            var viewModel = new RandomVehicleViewModel()
+            {
+                Vehicle = vehicle,
+                Customers = customers
+
+            };
+
+            return View(viewModel);
         }
     }
 }
