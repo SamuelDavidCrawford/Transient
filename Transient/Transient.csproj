@@ -204,11 +204,41 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608221437042_InitialModel.cs" />
+    <Compile Include="Migrations\201608221437042_InitialModel.Designer.cs">
+      <DependentUpon>201608221437042_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608221446167_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201608221446167_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201608221446167_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608221449523_AddMembershipType.cs" />
+    <Compile Include="Migrations\201608221449523_AddMembershipType.Designer.cs">
+      <DependentUpon>201608221449523_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608221508108_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201608221508108_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201608221508108_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608221517094_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201608221517094_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201608221517094_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608231930378_AddedNamePropertyToMembershipType.cs" />
+    <Compile Include="Migrations\201608231930378_AddedNamePropertyToMembershipType.Designer.cs">
+      <DependentUpon>201608231930378_AddedNamePropertyToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608231943187_SetNameOfMembershipTypes.cs" />
+    <Compile Include="Migrations\201608231943187_SetNameOfMembershipTypes.Designer.cs">
+      <DependentUpon>201608231943187_SetNameOfMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -295,6 +325,29 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608221437042_InitialModel.resx">
+      <DependentUpon>201608221437042_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221446167_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201608221446167_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221449523_AddMembershipType.resx">
+      <DependentUpon>201608221449523_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221508108_PopulateMembershipTypes.resx">
+      <DependentUpon>201608221508108_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221517094_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201608221517094_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608231930378_AddedNamePropertyToMembershipType.resx">
+      <DependentUpon>201608231930378_AddedNamePropertyToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608231943187_SetNameOfMembershipTypes.resx">
+      <DependentUpon>201608231943187_SetNameOfMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
