@@ -240,6 +240,10 @@
     <Compile Include="Migrations\201608231959366_AddedBirthDatePropertyToCustomer1.Designer.cs">
       <DependentUpon>201608231959366_AddedBirthDatePropertyToCustomer1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608232018001_AddedBirthDatePropertyToCustomer2.cs" />
+    <Compile Include="Migrations\201608232018001_AddedBirthDatePropertyToCustomer2.Designer.cs">
+      <DependentUpon>201608232018001_AddedBirthDatePropertyToCustomer2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -361,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608231959366_AddedBirthDatePropertyToCustomer1.resx">
       <DependentUpon>201608231959366_AddedBirthDatePropertyToCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608232018001_AddedBirthDatePropertyToCustomer2.resx">
+      <DependentUpon>201608232018001_AddedBirthDatePropertyToCustomer2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
