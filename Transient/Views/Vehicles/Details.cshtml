@@ -9,7 +9,7 @@
 
 <ul>
     <li>Vehicle Type: @Model.VehicleType.Name</li>
-    <li>Born: @Model.Year</li>
-    <li>Year Fleeted: @Model.YearAdded</li>
+    <li>Born: @Model.Year.ToShortDateString()</li>
+    <li>Year Fleeted: @Model.YearAdded.ToShortDateString()</li>
     <li>Stock: @Model.NumberInStock</li>
 </ul>
