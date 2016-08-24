@@ -9,6 +9,13 @@ namespace Transient.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime Year { get; set; }
+        public DateTime YearAdded { get; set; }
+        public int NumberInStock { get; set; }
+        public VehicleType VehicleType { get; set; } //navigation property
+        public byte VehicleTypeId { get; set; }
+
+
     }
 
     // /vehicles/random

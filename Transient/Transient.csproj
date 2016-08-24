@@ -248,6 +248,22 @@
     <Compile Include="Migrations\201608232120246_AddedBirthDatePropertyToCustomer3.Designer.cs">
       <DependentUpon>201608232120246_AddedBirthDatePropertyToCustomer3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608232351362_AddedVehiclesDbSetToIdentityModel.cs" />
+    <Compile Include="Migrations\201608232351362_AddedVehiclesDbSetToIdentityModel.Designer.cs">
+      <DependentUpon>201608232351362_AddedVehiclesDbSetToIdentityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608232355292_AddedAdditionalVehicleProperties.cs" />
+    <Compile Include="Migrations\201608232355292_AddedAdditionalVehicleProperties.Designer.cs">
+      <DependentUpon>201608232355292_AddedAdditionalVehicleProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608232359535_AddVehicleType.cs" />
+    <Compile Include="Migrations\201608232359535_AddVehicleType.Designer.cs">
+      <DependentUpon>201608232359535_AddVehicleType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608240003055_PopulateVehicleTypes.cs" />
+    <Compile Include="Migrations\201608240003055_PopulateVehicleTypes.Designer.cs">
+      <DependentUpon>201608240003055_PopulateVehicleTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -256,6 +272,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\VehicleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\IndexCustomerViewModel.cs" />
@@ -375,6 +392,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608232120246_AddedBirthDatePropertyToCustomer3.resx">
       <DependentUpon>201608232120246_AddedBirthDatePropertyToCustomer3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608232351362_AddedVehiclesDbSetToIdentityModel.resx">
+      <DependentUpon>201608232351362_AddedVehiclesDbSetToIdentityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608232355292_AddedAdditionalVehicleProperties.resx">
+      <DependentUpon>201608232355292_AddedAdditionalVehicleProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608232359535_AddVehicleType.resx">
+      <DependentUpon>201608232359535_AddVehicleType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608240003055_PopulateVehicleTypes.resx">
+      <DependentUpon>201608240003055_PopulateVehicleTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
