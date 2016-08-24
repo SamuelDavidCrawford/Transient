@@ -25,6 +25,52 @@ namespace Transient.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            var vehicleTypes = _context.VehicleTypes.ToList();
+            var viewModel = new VehicleFormViewModel
+            {
+                VehicleType = vehicleTypes
+            };
+
+            return View("VehicleForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Vehicle vehicle)
+        {
+            if (vehicle.Id == 0)
+                _context.Vehicles.Add(vehicle);
+            else
+            {
+                var vehicleInDb = _context.Vehicles.Single(v => v.Id == vehicle.Id);
+                vehicleInDb.Name = vehicle.Name;
+                vehicleInDb.Year = vehicle.Year;
+                vehicleInDb.VehicleTypeId = vehicle.VehicleTypeId;
+                vehicleInDb.NumberInStock = vehicle.NumberInStock;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Vehicles");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var vehicle = _context.Vehicles.SingleOrDefault(v => v.Id == id);
+
+            if (vehicle == null)
+                return HttpNotFound();
+
+            var viewModel = new VehicleFormViewModel
+            {
+                Vehicle = vehicle,
+                VehicleType = _context.VehicleTypes.ToList()
+            };
+
+            return View("VehicleForm", viewModel);
+        }
+
         public ViewResult Index()
         {
             var vehicles = _context.Vehicles.Include(v => v.VehicleType).ToList();

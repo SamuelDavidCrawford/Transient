@@ -1,0 +1,37 @@
+﻿@model Transient.ViewModels.VehicleFormViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Vehicle.Id == 0)
+{
+    <h2>New Vehicle</h2>
+}
+else
+{
+    <h2>Edit Vehicle</h2>
+}
+
+
+@using (Html.BeginForm("Save", "Vehicles"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Vehicle.Name)
+        @Html.TextBoxFor(m => m.Vehicle.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Year">Manufacture Date</label>
+        @Html.TextBoxFor(m => m.Vehicle.Year, "{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="VehicleTypeId">Vehicle Type</label>
+        @Html.DropDownListFor(m => m.Vehicle.VehicleTypeId, new SelectList(Model.VehicleType, "Id", "Name"), "Select Vehicle Type", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="NumberInStock">Number in Stock</label>
+        @Html.TextBoxFor(m => m.Vehicle.NumberInStock, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.Vehicle.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}

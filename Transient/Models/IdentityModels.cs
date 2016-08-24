@@ -24,6 +24,8 @@ namespace Transient.Models
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<MembershipType> MembershipTypes { get; set; }
+        public DbSet<VehicleType> VehicleTypes { get; set; }
+
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
