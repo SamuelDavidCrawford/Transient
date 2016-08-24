@@ -268,6 +268,10 @@
     <Compile Include="Migrations\201608240013526_AddedAnnotationToVehicleProperties.Designer.cs">
       <DependentUpon>201608240013526_AddedAnnotationToVehicleProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608241452483_AddedLocationDbSetToIdentityModel.cs" />
+    <Compile Include="Migrations\201608241452483_AddedLocationDbSetToIdentityModel.Designer.cs">
+      <DependentUpon>201608241452483_AddedLocationDbSetToIdentityModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -411,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608240013526_AddedAnnotationToVehicleProperties.resx">
       <DependentUpon>201608240013526_AddedAnnotationToVehicleProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241452483_AddedLocationDbSetToIdentityModel.resx">
+      <DependentUpon>201608241452483_AddedLocationDbSetToIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

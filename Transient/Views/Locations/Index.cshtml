@@ -5,30 +5,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Locations</h2>
-
-@if (Model.Count() == 0)
-{
-    <p>There are no locations renting vehicles</p>
-}
-else
-{
-    <table class=“table table-bordered table-hover”>
-        <thead>
-            <tr>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var location in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(location.Name, "Details", "Locations", new { id = location.Id }, null)</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-
-
+<div class="container">
+    <h2>Locations</h2>
+    @if (Model.Count() == 0)
+    {
+        <p>We do not have any locations with available vehicles</p>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var location in Model)
+                    {
+                        <tr>
+                            <td>@Html.ActionLink(location.Name, "Details", "Locations", new { id = location.Id }, null)</td>
+                            <td>@location.Address</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
 
