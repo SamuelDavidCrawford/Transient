@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Transient.Models;
 using Transient.ViewModels;
+using System.Data.Entity;
 
 namespace Transient.Controllers
 {
@@ -12,17 +13,28 @@ namespace Transient.Controllers
     {
         // GET: Vehicles
 
+        private ApplicationDbContext _context;
+
+        public VehiclesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
         public ViewResult Index()
         {
-            var vehicles = GetVehicles();
+            var vehicles = _context.Vehicles.Include(v => v.VehicleType).ToList();
 
             return View(vehicles);
         }
 
         public ActionResult Details(int id)
         {
-            var vehicle = GetVehicles().SingleOrDefault(v => v.Id == id);
+            var vehicle = _context.Vehicles.Include(v => v.VehicleType).SingleOrDefault(v => v.Id == id);
 
             if (vehicle == null)
                 return HttpNotFound();
