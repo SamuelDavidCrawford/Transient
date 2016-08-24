@@ -42,15 +42,6 @@ namespace Transient.Controllers
             return View(vehicle);
         }
 
-        private IEnumerable<Vehicle> GetVehicles()
-        {
-            return new List<Vehicle>
-            {
-                new Vehicle { Name = "Rolls Royce", Id = 1 },
-                new Vehicle {Name = "Range Rover", Id = 2 }
-            };
-        }
-
         //not being used
         public ActionResult Random()
         {
