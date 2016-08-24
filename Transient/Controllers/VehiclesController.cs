@@ -30,7 +30,7 @@ namespace Transient.Controllers
             var vehicleTypes = _context.VehicleTypes.ToList();
             var viewModel = new VehicleFormViewModel
             {
-                VehicleType = vehicleTypes
+                VehicleTypes = vehicleTypes
             };
 
             return View("VehicleForm", viewModel);
@@ -65,7 +65,7 @@ namespace Transient.Controllers
             var viewModel = new VehicleFormViewModel
             {
                 Vehicle = vehicle,
-                VehicleType = _context.VehicleTypes.ToList()
+                VehicleTypes = _context.VehicleTypes.ToList()
             };
 
             return View("VehicleForm", viewModel);

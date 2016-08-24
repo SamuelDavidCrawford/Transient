@@ -8,7 +8,7 @@ namespace Transient.ViewModels
 {
     public class VehicleFormViewModel
     {
-        public IEnumerable<VehicleType> VehicleType { get; set; }
+        public IEnumerable<VehicleType> VehicleTypes { get; set; }
         public Vehicle Vehicle { get; set; }
 
     }
