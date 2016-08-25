@@ -288,6 +288,30 @@
     <Compile Include="Migrations\201608251602068_AddedLocationIdPropertyToVehicleModel.Designer.cs">
       <DependentUpon>201608251602068_AddedLocationIdPropertyToVehicleModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608251816379_AddedLocationIdPropertyToVehicleModel1.cs" />
+    <Compile Include="Migrations\201608251816379_AddedLocationIdPropertyToVehicleModel1.Designer.cs">
+      <DependentUpon>201608251816379_AddedLocationIdPropertyToVehicleModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251832332_Empty.cs" />
+    <Compile Include="Migrations\201608251832332_Empty.Designer.cs">
+      <DependentUpon>201608251832332_Empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251837544_ChangedLocationDataAnnotations.cs" />
+    <Compile Include="Migrations\201608251837544_ChangedLocationDataAnnotations.Designer.cs">
+      <DependentUpon>201608251837544_ChangedLocationDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251844241_AlteredVehicleDataAnnotation.cs" />
+    <Compile Include="Migrations\201608251844241_AlteredVehicleDataAnnotation.Designer.cs">
+      <DependentUpon>201608251844241_AlteredVehicleDataAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251848518_ChangedVehicleNullableYear.cs" />
+    <Compile Include="Migrations\201608251848518_ChangedVehicleNullableYear.Designer.cs">
+      <DependentUpon>201608251848518_ChangedVehicleNullableYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251851129_ChangedVehicleNullableYear1.cs" />
+    <Compile Include="Migrations\201608251851129_ChangedVehicleNullableYear1.Designer.cs">
+      <DependentUpon>201608251851129_ChangedVehicleNullableYear1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -452,6 +476,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608251602068_AddedLocationIdPropertyToVehicleModel.resx">
       <DependentUpon>201608251602068_AddedLocationIdPropertyToVehicleModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251816379_AddedLocationIdPropertyToVehicleModel1.resx">
+      <DependentUpon>201608251816379_AddedLocationIdPropertyToVehicleModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251832332_Empty.resx">
+      <DependentUpon>201608251832332_Empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251837544_ChangedLocationDataAnnotations.resx">
+      <DependentUpon>201608251837544_ChangedLocationDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251844241_AlteredVehicleDataAnnotation.resx">
+      <DependentUpon>201608251844241_AlteredVehicleDataAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251848518_ChangedVehicleNullableYear.resx">
+      <DependentUpon>201608251848518_ChangedVehicleNullableYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251851129_ChangedVehicleNullableYear1.resx">
+      <DependentUpon>201608251851129_ChangedVehicleNullableYear1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
