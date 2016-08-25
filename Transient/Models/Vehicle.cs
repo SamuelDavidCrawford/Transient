@@ -18,6 +18,7 @@ namespace Transient.Models
         public VehicleType VehicleType { get; set; } //navigation property
         [Required]
         public byte VehicleTypeId { get; set; }
+        public Location Location { get; set; }
 
 
     }

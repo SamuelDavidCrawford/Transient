@@ -10,6 +10,14 @@ namespace Transient.ViewModels
     {
         public IEnumerable<VehicleType> VehicleTypes { get; set; }
         public Vehicle Vehicle { get; set; }
-
+        public string Title
+        {
+            get
+            {
+                if (Vehicle != null && Vehicle.Id != 0)
+                    return "Edit Vehicle";
+                return "New Vehicle";
+            }
+        }
     }
 }

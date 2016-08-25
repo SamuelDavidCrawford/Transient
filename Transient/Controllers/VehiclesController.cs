@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Transient.Models;
 using Transient.ViewModels;
 using System.Data.Entity;
+using Transient.Migrations;
 
 namespace Transient.Controllers
 {
@@ -57,7 +58,7 @@ namespace Transient.Controllers
 
         public ActionResult Edit(int id)
         {
-            var vehicle = _context.Vehicles.SingleOrDefault(v => v.Id == id);
+            var vehicle = _context.Vehicles.SingleOrDefault(c => c.Id == id);
 
             if (vehicle == null)
                 return HttpNotFound();

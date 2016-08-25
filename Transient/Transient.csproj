@@ -272,6 +272,14 @@
     <Compile Include="Migrations\201608241452483_AddedLocationDbSetToIdentityModel.Designer.cs">
       <DependentUpon>201608241452483_AddedLocationDbSetToIdentityModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608251551146_AddedNumberOfStockedVehiclesToLocationsModel.cs" />
+    <Compile Include="Migrations\201608251551146_AddedNumberOfStockedVehiclesToLocationsModel.Designer.cs">
+      <DependentUpon>201608251551146_AddedNumberOfStockedVehiclesToLocationsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251552453_ChangedPropertyNameOfLocationStockedVehicles.cs" />
+    <Compile Include="Migrations\201608251552453_ChangedPropertyNameOfLocationStockedVehicles.Designer.cs">
+      <DependentUpon>201608251552453_ChangedPropertyNameOfLocationStockedVehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -285,6 +293,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\IndexCustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\LocationFormViewModel.cs" />
     <Compile Include="ViewModels\RandomVehicleViewModel.cs" />
     <Compile Include="ViewModels\VehicleFormViewModel.cs" />
   </ItemGroup>
@@ -359,6 +368,7 @@
     <Content Include="Views\Locations\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Vehicles\VehicleForm.cshtml" />
+    <Content Include="Views\Locations\LocationForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -422,6 +432,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608241452483_AddedLocationDbSetToIdentityModel.resx">
       <DependentUpon>201608241452483_AddedLocationDbSetToIdentityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251551146_AddedNumberOfStockedVehiclesToLocationsModel.resx">
+      <DependentUpon>201608251551146_AddedNumberOfStockedVehiclesToLocationsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251552453_ChangedPropertyNameOfLocationStockedVehicles.resx">
+      <DependentUpon>201608251552453_ChangedPropertyNameOfLocationStockedVehicles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

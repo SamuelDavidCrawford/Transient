@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Transient.Models;
+using Transient.ViewModels;
 
 namespace Transient.Controllers
 {
@@ -40,15 +41,49 @@ namespace Transient.Controllers
 
         }
 
-        private IEnumerable<Location> GetLocations()
+        public ViewResult New()
         {
-            return new List<Location>
+            var viewModel = new LocationFormViewModel();
+
+            return View("LocationForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var location = _context.Locations.SingleOrDefault(c => c.Id == id);
+            if (location == null)
+                return HttpNotFound();
+            
+            var viewModel = new LocationFormViewModel
             {
-                new Location { Name = "Bucktown", Id = 1 },
-                new Location { Name = "Wicker Park", Id = 2 }
+                Location = location
+
             };
 
+            return View("LocationForm", viewModel);
         }
+
+        [HttpPost]
+        public ActionResult Save(Location location)
+        {
+            if(location.Id == 0)
+            {
+                _context.Locations.Add(location);
+            }
+            else
+            {
+                var locationInDb = new Location();
+                locationInDb.Name = location.Name;
+                locationInDb.Address = location.Address;
+
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Locations");
+        }
+
+
     }
 
 }

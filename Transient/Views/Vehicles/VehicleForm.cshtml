@@ -4,15 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.Vehicle.Id == 0)
-{
-    <h2>New Vehicle</h2>
-}
-else
-{
-    <h2>Edit Vehicle</h2>
-}
-
+<h2>@Model.Title</h2>
 
 @using (Html.BeginForm("Save", "Vehicles"))
 {
@@ -26,7 +18,7 @@ else
     </div>
     <div class="form-group">
         <label for="VehicleTypeId">Vehicle Type</label>
-        @Html.DropDownListFor(m => m.Vehicle.VehicleTypeId, new SelectList(Model.VehicleType, "Id", "Name"), "Select Vehicle Type", new { @class = "form-control" })
+        @Html.DropDownListFor(m => m.Vehicle.VehicleTypeId, new SelectList(Model.VehicleTypes, "Id", "Name"), "Select Vehicle Type", new { @class = "form-control" })
     </div>
     <div class="form-group">
         <label for="NumberInStock">Number in Stock</label>
