@@ -19,7 +19,7 @@ namespace Transient.Models
         [Required]
         public byte VehicleTypeId { get; set; }
         public Location Location { get; set; }
-
+        public int LocationId { get; set; }
 
     }
 

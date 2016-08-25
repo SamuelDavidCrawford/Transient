@@ -280,6 +280,14 @@
     <Compile Include="Migrations\201608251552453_ChangedPropertyNameOfLocationStockedVehicles.Designer.cs">
       <DependentUpon>201608251552453_ChangedPropertyNameOfLocationStockedVehicles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608251600312_AddedLocationPropertyToVehicleModel.cs" />
+    <Compile Include="Migrations\201608251600312_AddedLocationPropertyToVehicleModel.Designer.cs">
+      <DependentUpon>201608251600312_AddedLocationPropertyToVehicleModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251602068_AddedLocationIdPropertyToVehicleModel.cs" />
+    <Compile Include="Migrations\201608251602068_AddedLocationIdPropertyToVehicleModel.Designer.cs">
+      <DependentUpon>201608251602068_AddedLocationIdPropertyToVehicleModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -438,6 +446,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608251552453_ChangedPropertyNameOfLocationStockedVehicles.resx">
       <DependentUpon>201608251552453_ChangedPropertyNameOfLocationStockedVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251600312_AddedLocationPropertyToVehicleModel.resx">
+      <DependentUpon>201608251600312_AddedLocationPropertyToVehicleModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251602068_AddedLocationIdPropertyToVehicleModel.resx">
+      <DependentUpon>201608251602068_AddedLocationIdPropertyToVehicleModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
